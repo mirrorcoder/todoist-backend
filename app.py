@@ -3,9 +3,11 @@ import config
 from create_app import create_app
 from extensions import db
 from views.tasks import tasks
+from views.main import main
 
 blueprints = [
-    tasks
+    tasks,
+    main
 ]
 
 extensions = [
