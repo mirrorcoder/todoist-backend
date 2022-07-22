@@ -26,11 +26,9 @@ def configure_app(app, config):
     if config is not None:
         app.config.from_object(config)
 
-
 def configure_modules(app, modules):
     for module in modules:
         app.register_blueprint(module)
-
 
 def configure_extensions(app, exts):
     for ext in exts:

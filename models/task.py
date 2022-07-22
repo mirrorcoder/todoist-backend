@@ -11,5 +11,6 @@ class Task(db.Model):
     name_user = Column(String, nullable=False)
     email_user = Column(String, nullable=False)
     desc_task = Column(Text, nullable=False)
+    is_edit_admin = Column(Boolean, default=False)
     is_done = Column(Boolean, default=False)
 

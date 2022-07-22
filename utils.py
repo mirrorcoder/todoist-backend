@@ -1,7 +1,7 @@
 def row2dict(row):
     d = {}
     for column in row.__table__.columns:
-        d[column.name] = str(getattr(row, column.name))
+        d[column.name] = getattr(row, column.name)
 
     return d
 
@@ -11,7 +11,8 @@ def calc_pages(model, page, count_per_page):
         'start': None,
         'next': None,
         'prev': None,
-        'last': None
+        'last': None,
+        'current': page + 1
     }
     if count_pages > 1:
         if page > 0:
